@@ -1,9 +1,9 @@
 from pyrogram import filters, Client
 from pyrogram.types import CallbackQuery, InputMediaPhoto, Message, InputMediaVideo, InlineKeyboardButton, InlineKeyboardMarkup
 
-API_ID =
-API_HASH = ""
-TOKEN = ""
+API_ID = 7839236
+API_HASH = "5c34945e1a52089f3bf434a44b25aa1d"
+TOKEN = "6122610087:AAG0Gox3EOyjfHvpsNsCyuTEm-IZiB9uygE"
 
 client = Client(
     "Client",

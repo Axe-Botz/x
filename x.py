@@ -1,9 +1,16 @@
 from pyrogram import filters, Client
 from pyrogram.types import CallbackQuery, InputMediaPhoto, Message, InputMediaVideo, InlineKeyboardButton, InlineKeyboardMarkup
 
+API_ID =
+API_HASH = ""
+TOKEN = ""
 
-
-
+client = Client(
+    "Client",
+    API_ID,
+    API_HASH,
+    bot_token=TOKEN,
+)
 ## ---------------------------------------------------- ##
 
 IMG = "https://te.legra.ph/file/c8de202c68588828a9250.jpg"

@@ -66,4 +66,4 @@ async def queued_tracks(client, CallbackQuery: CallbackQuery, _):
     )
 
 client.start()
-print("Bot Started!"
+print("Bot Started!")

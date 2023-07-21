@@ -12,9 +12,12 @@ async def start(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "Working?", callback_data="video")
+                        "Working?", callback_data="zeno")
                 ]
            ]
         ),
     )        
         
+
+
+@Client.on_callback_query(filters.regex("zeno"))

@@ -40,7 +40,7 @@ async def start(bot: Client, message: Message):
 async def queuedracks(bot, CallbackQuery: CallbackQuery):
     callback_data = CallbackQuery.data.strip()
     #callback_request = callback_data.split(None, 1)[1]
-    await CallbackQuery.answer()
+    #await CallbackQuery.answer()
     buttons = [
             [
                 InlineKeyboardButton("Back?", callback_data="start")
@@ -58,7 +58,7 @@ async def queuedracks(bot, CallbackQuery: CallbackQuery):
 async def queued(bot, CallbackQuery: CallbackQuery):
     callback_data = CallbackQuery.data.strip()
     #callback_request = callback_data.split(None, 1)[1]
-    await CallbackQuery.answer()
+    #await CallbackQuery.answer()
     upl = [
             [
                 InlineKeyboardButton("Working?", callback_data="zeno")

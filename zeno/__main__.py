@@ -6,7 +6,7 @@ from pyrogram.types import CallbackQuery, InputMediaPhoto, Message, InputMediaVi
 
 API_ID = 7839236
 API_HASH = "5c34945e1a52089f3bf434a44b25aa1d"
-TOKEN = "6122610087:AAG0Gox3EOyjfHvpsNsCyuTEm-IZiB9uygE"
+TOKEN = "6122610087:AAGp9BhXBFyuwWEosawEQr8Uqi1sD47tnJ8"
 
 bot = Client(
     "Client",

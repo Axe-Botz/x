@@ -1,5 +1,5 @@
 from pyrogram import filters, Client
-from pyrogram.types import CallbackQuery, InputMediaPhoto, Message, InputMediaVideo
+from pyrogram.types import CallbackQuery, InputMediaPhoto, Message, InputMediaVideo, InlineKeyboardButton, InlineKeyboardMarkup
 
 IMG = ""
 TEXT = "👋 Hello, I'm Alive."
@@ -33,7 +33,9 @@ async def queued_tracks(client, CallbackQuery: CallbackQuery, _):
     med = InputMediaVideo(
         media="https://te.legra.ph/file/f19d43253efd0a4409132.mp4"        
     )
-    await CallbackQuery.edit_message_media(media=med)
+    await CallbackQuery.edit_message_media(
+        media=med, reply_markup=buttons
+    )
 
 
 @Client.on_callback_query(filters.regex("start"))

@@ -39,7 +39,7 @@ async def start(bot: Client, message: Message):
 @bot.on_callback_query(filters.regex("zeno"))
 async def queuedracks(bot, CallbackQuery: CallbackQuery):
     callback_data = CallbackQuery.data.strip()
-    callback_request = callback_data.split(None, 1)[1]
+    #callback_request = callback_data.split(None, 1)[1]
     await CallbackQuery.answer()
     buttons = [
             [
@@ -57,7 +57,7 @@ async def queuedracks(bot, CallbackQuery: CallbackQuery):
 @bot.on_callback_query(filters.regex("start"))
 async def queued(bot, CallbackQuery: CallbackQuery):
     callback_data = CallbackQuery.data.strip()
-    callback_request = callback_data.split(None, 1)[1]
+    #callback_request = callback_data.split(None, 1)[1]
     await CallbackQuery.answer()
     upl = [
             [

@@ -65,3 +65,5 @@ async def queued_tracks(client, CallbackQuery: CallbackQuery, _):
         media=med, reply_markup=upl
     )
 
+client.start()
+print("Bot Started!")

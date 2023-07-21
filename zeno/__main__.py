@@ -67,3 +67,7 @@ async def queued_tracks(client, CallbackQuery: CallbackQuery, _):
 
 client.start()
 print("Bot Started!")
+
+if __name__ == "__main__":
+  #loop.run_until_complete(start_bot())
+  idle()

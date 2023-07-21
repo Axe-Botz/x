@@ -8,7 +8,7 @@ API_ID = 7839236
 API_HASH = "5c34945e1a52089f3bf434a44b25aa1d"
 TOKEN = "6122610087:AAG0Gox3EOyjfHvpsNsCyuTEm-IZiB9uygE"
 
-client = Client(
+bot = Client(
     "Client",
     API_ID,
     API_HASH,
@@ -19,8 +19,8 @@ client = Client(
 IMG = "https://te.legra.ph/file/c8de202c68588828a9250.jpg"
 TEXT = "👋 Hello, I'm Alive."
 
-@Client.on_message(filters.command("start"))
-async def start(client: Client, message: Message):
+@bot.on_message(filters.command("start"))
+async def start(bot: Client, message: Message):
     await message.reply_photo(
         photo=f"{IMG}",
         caption=TEXT,
@@ -36,8 +36,8 @@ async def start(client: Client, message: Message):
         
 
 
-@Client.on_callback_query(filters.regex("zeno"))
-async def queued_tracks(client, CallbackQuery: CallbackQuery, _):
+@bot.on_callback_query(filters.regex("zeno"))
+async def queued_tracks(bot, CallbackQuery: CallbackQuery, _):
     callback_data = CallbackQuery.data.strip()
     callback_request = callback_data.split(None, 1)[1]
     await CallbackQuery.answer()
@@ -54,8 +54,8 @@ async def queued_tracks(client, CallbackQuery: CallbackQuery, _):
     )
 
 
-@Client.on_callback_query(filters.regex("start"))
-async def queued_tracks(client, CallbackQuery: CallbackQuery, _):
+@bot.on_callback_query(filters.regex("start"))
+async def queued_tracks(bot, CallbackQuery: CallbackQuery, _):
     callback_data = CallbackQuery.data.strip()
     callback_request = callback_data.split(None, 1)[1]
     await CallbackQuery.answer()
@@ -69,7 +69,7 @@ async def queued_tracks(client, CallbackQuery: CallbackQuery, _):
         media=med, reply_markup=upl
     )
 
-client.start()
+bot.start()
 print("Bot Started!")
 
 if __name__ == "__main__":

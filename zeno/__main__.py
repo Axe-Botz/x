@@ -37,7 +37,7 @@ async def start(bot: Client, message: Message):
 
 
 @bot.on_callback_query(filters.regex("zeno"))
-async def queued_tracks(bot, CallbackQuery: CallbackQuery, _):
+async def queuedracks(bot, CallbackQuery: CallbackQuery):
     callback_data = CallbackQuery.data.strip()
     callback_request = callback_data.split(None, 1)[1]
     await CallbackQuery.answer()
@@ -55,7 +55,7 @@ async def queued_tracks(bot, CallbackQuery: CallbackQuery, _):
 
 
 @bot.on_callback_query(filters.regex("start"))
-async def queued(bot, CallbackQuery: CallbackQuery, _):
+async def queued(bot, CallbackQuery: CallbackQuery):
     callback_data = CallbackQuery.data.strip()
     callback_request = callback_data.split(None, 1)[1]
     await CallbackQuery.answer()

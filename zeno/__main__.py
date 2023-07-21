@@ -1,3 +1,6 @@
+
+import asyncio
+
 from pyrogram import filters, Client, idle
 from pyrogram.types import CallbackQuery, InputMediaPhoto, Message, InputMediaVideo, InlineKeyboardButton, InlineKeyboardMarkup
 
@@ -15,6 +18,7 @@ client = Client(
 
 IMG = "https://te.legra.ph/file/c8de202c68588828a9250.jpg"
 TEXT = "👋 Hello, I'm Alive."
+
 @Client.on_message(filters.command("start"))
 async def start(client: Client, message: Message):
     await message.reply_photo(
